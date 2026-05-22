@@ -1,0 +1,156 @@
+# Tandroy-mode-site-
+Site officiel tandroy mode marché 
+export default function TandroyModeMarche() { const products = [ { title: 'Mode Premium', desc: 'Vêtements élégants et modernes pour homme et femme.', }, { title: 'Collection Tendances', desc: 'Nouveautés exclusives inspirées du style Tandroy.', }, { title: 'Accessoires Fashion', desc: 'Complétez votre look avec nos accessoires premium.', }, ];
+
+return ( <div className="min-h-screen bg-white text-gray-900"> {/* Navbar */} <header className="sticky top-0 z-50 bg-white shadow-sm border-b"> <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"> <h1 className="text-2xl font-bold">Tandroy-Mode-Marché</h1>
+
+<nav className="hidden md:flex gap-6 font-medium">
+        <a href="#about" className="hover:text-gray-500">À propos</a>
+        <a href="#products" className="hover:text-gray-500">Articles</a>
+        <a href="#contact" className="hover:text-gray-500">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  {/* Hero */}
+  <section className="bg-gradient-to-r from-black to-gray-800 text-white py-24 px-6 text-center">
+    <div className="max-w-4xl mx-auto">
+      <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+        Boutique Mode Tandroy Premium
+      </h2>
+
+      <p className="text-xl text-gray-300 mb-10 leading-8">
+        Découvrez une sélection élégante de vêtements et articles tendances.
+        Style, qualité et identité moderne réunis dans une seule boutique.
+      </p>
+
+      <div className="flex flex-wrap justify-center gap-4">
+        <a
+          href="https://instagram.com/"
+          target="_blank"
+          className="bg-white text-black px-8 py-4 rounded-2xl font-semibold shadow-lg"
+        >
+          Voir Instagram
+        </a>
+
+        <a
+          href="https://wa.me/261"
+          target="_blank"
+          className="border border-white px-8 py-4 rounded-2xl font-semibold"
+        >
+          Commander sur WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* About */}
+  <section id="about" className="py-20 px-6 bg-white">
+    <div className="max-w-5xl mx-auto text-center">
+      <h2 className="text-4xl font-bold mb-8">À propos de nous</h2>
+
+      <p className="text-lg leading-9 text-gray-700">
+        Tandroy-Mode-Marché est une boutique spécialisée dans les articles
+        premium et tendances. Nous mettons en avant la qualité, l’élégance
+        et la culture moderne à travers des collections uniques.
+      </p>
+    </div>
+  </section>
+
+  {/* Products */}
+  <section id="products" className="bg-gray-100 py-20 px-6">
+    <div className="max-w-7xl mx-auto">
+      <div className="text-center mb-14">
+        <h2 className="text-4xl font-bold mb-4">Nos Produits</h2>
+        <p className="text-gray-600 text-lg">
+          Découvrez nos meilleures collections.
+        </p>
+      </div>
+
+      <div className="grid md:grid-cols-3 gap-8">
+        {products.map((product, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-3xl overflow-hidden shadow-xl hover:scale-105 transition duration-300"
+          >
+            <div className="h-72 bg-gray-300"></div>
+
+            <div className="p-6">
+              <h3 className="text-2xl font-bold mb-3">{product.title}</h3>
+              <p className="text-gray-600 leading-7">{product.desc}</p>
+
+              <button className="mt-6 w-full bg-black text-white py-3 rounded-2xl font-semibold hover:bg-gray-800 transition">
+                Commander
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Why Us */}
+  <section className="py-20 px-6 bg-white">
+    <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+      <div className="p-8 rounded-3xl shadow-lg border">
+        <h3 className="text-2xl font-bold mb-4">Qualité Premium</h3>
+        <p className="text-gray-600 leading-7">
+          Des articles sélectionnés avec soin pour garantir la meilleure qualité.
+        </p>
+      </div>
+
+      <div className="p-8 rounded-3xl shadow-lg border">
+        <h3 className="text-2xl font-bold mb-4">Livraison Rapide</h3>
+        <p className="text-gray-600 leading-7">
+          Expédition rapide et sécurisée partout à Madagascar.
+        </p>
+      </div>
+
+      <div className="p-8 rounded-3xl shadow-lg border">
+        <h3 className="text-2xl font-bold mb-4">Support Client</h3>
+        <p className="text-gray-600 leading-7">
+          Assistance disponible pour vos commandes et informations.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Contact */}
+  <section id="contact" className="bg-black text-white py-20 px-6 text-center">
+    <div className="max-w-4xl mx-auto">
+      <h2 className="text-4xl font-bold mb-8">Contactez-nous</h2>
+
+      <div className="space-y-4 text-lg text-gray-300">
+        <p>Email : herinialio.francis98@gmail.com</p>
+        <p>Instagram : @illsairy</p>
+        <p>TikTok : @sairy604</p>
+        <p>Disponible : 08h00 - 12h00</p>
+      </div>
+
+      <div className="mt-10 flex flex-wrap justify-center gap-4">
+        <a
+          href="https://instagram.com/"
+          target="_blank"
+          className="bg-white text-black px-6 py-3 rounded-2xl font-semibold"
+        >
+          Instagram
+        </a>
+
+        <a
+          href="https://tiktok.com/"
+          target="_blank"
+          className="border border-white px-6 py-3 rounded-2xl font-semibold"
+        >
+          TikTok
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* Footer */}
+  <footer className="bg-gray-950 text-gray-400 text-center py-6 text-sm">
+    © 2026 Tandroy-Mode-Marché • Tous droits réservés.
+  </footer>
+</div>
+
+); }
